@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ extended: true, limit: "40kb" }));
 
-app.use("api/v1/users", userRoutes);
+app.use("/api/v1/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Zoom Clone Backend!");
